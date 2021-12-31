@@ -1,0 +1,13 @@
+import random
+def is_win(player, opponent):
+        if (player == 'r' and opponent == 'c') or (player == 'c' and opponent == 'p') or (player == 'p' and opponent == 'r'): return True
+def play():
+    user = input("'r' for rock,'p' for paper, 'c' for cut") 
+    computer = random.choice (['r', 'p', 'c']) 
+    if user == computer: 
+        return 'tie'
+    if is_win(user, computer):
+        return 'Win!'
+    return 'Loser'
+    
+print (play())
